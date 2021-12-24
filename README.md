@@ -31,6 +31,7 @@ The [`grpr2-ch/`](https://github.com/saarcohen30/GrPR2-CH/tree/main/grpr2-ch) an
 - `--train_graph` -- In both setups (of either `n=4` or `n=8` agents), one can possibly decide whether to train the graph reasoning policy or not. After specifying `--train_graph true` upon the execution, the graph reasoning policy will be trained. By default, the graph reasoning policy will **not** be trained.
 - `--pretrained_graph` -- In both setups (of either `n=4` or `n=8` agents), one can possibly decide whether to utilize a pre-trained graph reasoning policy, which shall be stored in a file named as `local_graph.pt`. For this sake, the `--pretrained_graph` flag shall be set to true by specifying `--pretrained_graph true` upon the execution. By default, a pretrained graph reasoning policy will **not** be incorporated.
 - `--model_names_setting` - This flag specifies the names of the model to be trained. The possible models are as follows:
+
 | First Header  | Second Header |
 | ------------- | ------------- |
 | Content Cell  | Content Cell  |
