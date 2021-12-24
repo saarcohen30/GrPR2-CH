@@ -61,6 +61,7 @@ def parse_args():
     parser.add_argument('-a', "--aux", type=bool, default=True, help="name of the game")
     parser.add_argument('-m', "--model_names_setting", type=str, default='GrPR2AC2_GrPR2AC2', help="models setting agent vs adv")
     parser.add_argument('-tg', "--train_graph", type=bool, default=False, help="whether the graph reasoning policy should be trained or not")
+    parser.add_argument('-pg', "--pretrained_graph", type=bool, default=False, help="whether a pretrained graph reasoning policy should be used or not")
     parser.add_argument("--save_interval", default=1000, type=int)
     return parser.parse_args()
 
@@ -139,7 +140,7 @@ def main(arglist):
     agent_ob_list = [obsp.shape[0] for obsp in env.observation_space]
     
     GraphFlow_model = GraphFlows(n_s=full_obs_dim, n_agent=agent_num, n_step=arglist.batch_size)
-    if arglist.env_id == 'simple_spread_local':
+    if arglist.env_id == 'simple_spread_local' and arglist.pretrained_graph:
         GraphFlow_model.load(os.path.dirname(os.path.realpath(__file__)) + '/local_graph.pt')
     
     M = arglist.hidden_size
