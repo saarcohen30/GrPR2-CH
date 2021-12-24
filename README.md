@@ -30,9 +30,10 @@ The [`grpr2-ch/`](https://github.com/saarcohen30/GrPR2-CH/tree/main/grpr2-ch) an
 ### Important Flags
 - `--train_graph` -- In both setups (of either `n=4` or `n=8` agents), one can possibly decide whether to train the graph reasoning policy or not. After specifying `--train_graph true` upon the execution, the graph reasoning policy will be trained. By default, the graph reasoning policy will **not** be trained.
 - `--pretrained_graph` -- In both setups (of either `n=4` or `n=8` agents), one can possibly decide whether to utilize a pre-trained graph reasoning policy, which shall be stored in a file named as `local_graph.pt`. For this sake, the `--pretrained_graph` flag shall be set to true by specifying `--pretrained_graph true` upon the execution. By default, a pretrained graph reasoning policy will **not** be incorporated.
-- `--model_names_setting` - This flag specifies the names of the model to be trained. The possible models are as follows:
+- `--model_names_setting` - This flag specifies the names of the model to be trained. The possible models for initializing an self-play enviroment are as follows:
 
 | The Flag's Argument | The Model's Description |
 | ------------- | ------------- |
-| GrPR2AC`k`_GrPR2AC`k`  | For initializing an self-play enviroment, consisting of level-`k` GrPR2-CH agents. |
-| PR2AC`k`_PR2AC`k`  | For initializing an self-play enviroment, consisting of level-`k` GrPR2-L agents. |
+| GrPR2AC`k`_GrPR2AC`k`  | For level-`k` GrPR2-CH agents |
+| PR2AC`k`_PR2AC`k`  | For level-`k` GrPR2-L agents |
+| DDPG-ToM_DDPG-ToM | For DDPG agents with a level-1 [Theory-of-Mind model](http://proceedings.mlr.press/v80/rabinowitz18a/rabinowitz18a.pdf) that captures the dependency of an agent’s policy on opponents’ mental states (DDPG-ToM) |
