@@ -4,7 +4,6 @@
 !pip3 install -e git+https://github.com/openai/multiagent-particle-envs.git@6ed7cac026f0eb345d4c20232bafa1dc951c68e7#egg=multiagent
 !pip3 install git+https://github.com/openai/baselines
 !pip3 install python-igraph
-# !pip3 uninstall gym
 !pip3 install gym==0.10.5
 !pip3 install Gluoncv==0.3
 !pip3 install gtimer==1.0.0b5
