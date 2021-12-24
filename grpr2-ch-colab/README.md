@@ -1,11 +1,7 @@
-# Multi-agent Collective Intelligence
+# Multi-agent Collective Intelligence with Local Interactions
 
-This Framework aims to provide an easy to use toolkit for
-Multi-agent Reinforcement Learning research.
+This framework extends the toolkit implemented as part of the [Generalized Recursive Reasoning (GR2)](https://github.com/ying-wen/gr2/tree/master/code) framework, so as to support local interactions among agents which is encapsulated by our own framework.
 
-Overall processes:
-
-![processes](./docs/overall_training_processes.png)
 
 Environment: There are two differences for Multi-Agent Env Class: 1. The step(action_n) accepts n actions at each time; 2. The Env class needs a MAEnvSpec property which describes the action spaces and observation spaces for all agents.
 
@@ -48,15 +44,6 @@ sudo pip3 install joblib,path.py,gtimer,theano,keras,tensorflow,gym
 cd maci
 sudo pip3 install -e .
  ```
-
-
-## Runing Example
-
-```shell
-cd experiment
-python3 run_different_agents_gr2.py
-```
-
 
 ## Reference Projects
 The project implementation has referred much from the following projects:
