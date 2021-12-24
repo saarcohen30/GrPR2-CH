@@ -36,4 +36,5 @@ The [`grpr2-ch/`](https://github.com/saarcohen30/GrPR2-CH/tree/main/grpr2-ch) an
 | ------------- | ------------- |
 | GrPR2AC`k`_GrPR2AC`k`  | For level-`k` GrPR2-CH agents |
 | PR2AC`k`_PR2AC`k`  | For level-`k` GrPR2-L agents |
-| DDPG-ToM_DDPG-ToM | For DDPG agents with a level-1 [Theory-of-Mind model](http://proceedings.mlr.press/v80/rabinowitz18a/rabinowitz18a.pdf) that captures the dependency of an agent’s policy on opponents’ mental states (DDPG-ToM) |
+| DDPG-ToM_DDPG-ToM | For DDPG agents with a level-1 [Theory-of-Mind model](http://proceedings.mlr.press/v80/rabinowitz18a/rabinowitz18a.pdf) that captures the dependency of an agent’s policy on opponents’ mental states (DDPG-ToM). |
+| DDPG-OM_DDPG-OM | For DDPG agents with a level-0 model of [opponent modeling](http://proceedings.mlr.press/v48/he16.pdf), which is implemented by augmenting DDPG with an opponent module (DDPG-OM) that predicts opponents' behaviors in future states. |
