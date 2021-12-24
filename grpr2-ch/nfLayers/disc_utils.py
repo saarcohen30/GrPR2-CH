@@ -116,12 +116,12 @@ def one_hot_add(inputs, shift):
     """
     inputs = torch.stack((inputs, torch.zeros_like(inputs)), dim = -1)
     shift = torch.stack((shift, torch.zeros_like(shift)), dim = -1)
-    inputs_fft = torch.fft(inputs.float(), 1) #ignore last and first dimension to do batched fft
-    shift_fft = torch.fft(shift.float(), 1)
-    result_fft_real = inputs_fft[...,0]*shift_fft[...,0] - inputs_fft[...,1]*shift_fft[...,1]
-    result_fft_imag = inputs_fft[...,0]*shift_fft[...,1] + inputs_fft[...,1]*shift_fft[...,0]
+    inputs_fft = torch.fft.fft(inputs, 1) #ignore last and first dimension to do batched fft
+    shift_fft = torch.fft.fft(shift, 1)
+    result_fft_real = inputs_fft.real*shift_fft.real - inputs_fft.imag*shift_fft.imag
+    result_fft_imag = inputs_fft.real*shift_fft.imag + inputs_fft.imag*shift_fft.real
     result_fft = torch.stack((result_fft_real,result_fft_imag), dim = -1)
-    return torch.ifft(result_fft, 1)[...,0] #return only the real part
+    return torch.fft.ifft(result_fft, 1).real #return only the real part
     # inputs = tf.cast(inputs.detach(), tf.complex64)
     # shift = tf.cast(shift.detach(), tf.complex64)
     # return tf.math.real(tf.signal.ifft(tf.signal.fft(inputs) * tf.signal.fft(shift)))
