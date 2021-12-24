@@ -34,5 +34,5 @@ The [`grpr2-ch/`](https://github.com/saarcohen30/GrPR2-CH/tree/main/grpr2-ch) an
 
 | The Flag's Argument | The Model's Description |
 | ------------- | ------------- |
-| GrPR2AC`k`_GrPR2AC`k`  | Content Cell  |
-| Content Cell  | Content Cell  |
+| GrPR2AC`k`_GrPR2AC`k`  | For initializing an self-play enviroment, consisting of level-`k` GrPR2-CH agents. |
+| PR2AC`k`_PR2AC`k`  | For initializing an self-play enviroment, consisting of level-`k` GrPR2-L agents. |
