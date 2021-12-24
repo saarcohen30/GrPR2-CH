@@ -3,13 +3,13 @@
 This framework extends the toolkit implemented as part of the [Generalized Recursive Reasoning (GR2)](https://github.com/ying-wen/gr2/tree/master/code) framework, so as to support local interactions among agents which is encapsulated by our own framework.
 
 
-Environment: There are two differences for Multi-Agent Env Class: 1. The step(action_n) accepts n actions at each time; 2. The Env class needs a MAEnvSpec property which describes the action spaces and observation spaces for all agents.
+- **Environment**: There are two differences for Multi-Agent Env Class: 1. The step(action_n) accepts n actions at each time; 2. The Env class needs a MAEnvSpec property which describes the action spaces and observation spaces for all agents.
 
-Agent: the agent class has no difference than common RL agent, it uses the MAEnvSpec from Env Class to init the policy/value nets and replay buffer.
+- **Agent**: the agent class has no difference than common RL agent, it uses the MAEnvSpec from Env Class to init the policy/value nets and replay buffer.
 
-MASampler: Because the agents have to rollout simultaneously, a MASampler Class is designed to perform the sampling steps and add/return the step tuple to each agent's replay buffer.
+- **MASampler**: Because the agents have to rollout simultaneously, a MASampler Class is designed to perform the sampling steps and add/return the step tuple to each agent's replay buffer.
 
-MATrainer: In single agent, the trainer is included in the Agent Class. However, due to the complexity of Multi-Agent Training, which has to support independent/centralized/communication/opponent modelling, it is necessary to have a MATrainer Class to abstract these requirements from Agent Class. This is the core for Multi-agent training.
+- **MATrainer**: In single agent, the trainer is included in the Agent Class. However, due to the complexity of Multi-Agent Training, which has to support independent/centralized/communication/opponent modelling, it is necessary to have a MATrainer Class to abstract these requirements from Agent Class. This is the core for Multi-agent training.
 
 ## Installation
 
@@ -61,5 +61,7 @@ The project implementation has referred much from the following projects:
 * [rllib](https://github.com/rll/rllab)
 
 * [Stochastic Markov Games](https://github.com/aijunbai/markov-game)
+
+* [Generalized Recursive Reasoning (GR2)](https://github.com/ying-wen/gr2/tree/master/code)
   
     
