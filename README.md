@@ -23,6 +23,15 @@ As mentioned earlier, [FlowComm](https://www.ifaamas.org/Proceedings/aamas2021/p
 - [`grpr2-a/utils/agents.py`](https://github.com/saarcohen30/GrPR2-A/blob/main/grpr2-a/utils/agents.py) and [`grpr2-a-colab/utils/agents.py`](https://github.com/saarcohen30/GrPR2-A/blob/main/grpr2-a-colab/utils/agents.py) -- The class `AttentionREGMAAgent` implements the GrPR2-A agent, which incorporates both an agent's policy and its opponents' (approximated) conditional policies.
 
 ## Execution
-The [`grpr2-a/`](https://github.com/saarcohen30/GrPR2-A/tree/main/grpr2-a) and [`grpr2-a-colab/`](https://github.com/saarcohen30/GrPR2-A/tree/main/grpr2-a-colab) sub-directories consist of the `regma.py` module, whose execution performs the required testbed. Specifically, the following executions are possible:
-- `python regma/regma.py simple_spread_local maac` - For a setup of `n=4` agents.
-- `python regma/regma.py simple_spread_hetero maac` - For the extension of the cooperative navigation task to a <em>heterogeneous<\em> communication task. That is, for `n=8`, the third agent has a larger field of vision compared to the other agents. This allows us to simulate heterogeneity in hierarchical level of thinking, as agent `3` becomes more sophisticated compared to other agents.
+The [`grpr2-ch/`](https://github.com/saarcohen30/GrPR2-CH/tree/main/grpr2-ch) and [`grpr2-ch-colab/`](https://github.com/saarcohen30/GrPR2-CH/tree/main/grpr2-ch-colab) sub-directories consist of the `main.py` module, whose execution performs the required testbed. Specifically, the following executions are possible:
+- `python grpr2-ch/main.py simple_spread_local maac` or `python grpr2-ch-colab/main.py simple_spread_local maac --train_graph True` - For a setup of `n=4` agents.
+- `python regma/regma.py simple_spread_hetero maac` or `python grpr2-ch-colab/main.py simple_spread_hetero maac` - For a setup of `n=8` agents.
+
+### Important Flags
+- `--train_graph` -- In both setups (of either `n=4` or `n=8` agents), one can possibly decide whether to train the graph reasoning policy or not. After specifying `--train_graph true` upon the execution, the graph reasoning policy will be trained. By default, the graph reasoning policy will **not** be trained.
+- `--pretrained_graph` -- In both setups (of either `n=4` or `n=8` agents), one can possibly decide whether to utilize a pre-trained graph reasoning policy, which shall be stored in a file named as `local_graph.pt`. For this sake, the `--pretrained_graph` flag shall be set to true by specifying `--pretrained_graph true` upon the execution. By default, a pretrained graph reasoning policy will **not** be incorporated.
+- `--model_names_setting` - This flag specifies the names of the model to be trained. The possible models are as follows:
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
