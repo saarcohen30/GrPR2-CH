@@ -1,7 +1,7 @@
 # Hierarchical Graph Probabilistic Recursive Reasoning
 Code for implementation of the following Hierarchical Graph Probabilistic Recursive Reasoning frameworks (in the context of <em>The Cooperative Navigation Task</em> of the [Particle World environment](https://github.com/openai/multiagent-particle-envs)):
 - Level-k Graph Probabilistic Recursive Reasoning (**<em>GrPR2-L</em>**), where agent `i` at level `k` assumes that other agents are at level `k-1` and then best responds by integrating over all possible interactions induced by the interaction graph and best responses from lower-level agents to agent `i` of level `k-2`.
-- Cognitive Hierarchy Graph Probabilistic Recursive Reasoning (**<em>GrPR2-CH</em>**), which lets each level-`k` player best respond to a <em>mixture<\em> of strictly lower levels in the hierarchy, induced by truncation up to level `k - 1` from the underlying level distribution.
+- Cognitive Hierarchy Graph Probabilistic Recursive Reasoning (**<em>GrPR2-CH</em>**), which lets each level-`k` player best respond to a <em>mixture</em> of strictly lower levels in the hierarchy, induced by truncation up to level `k - 1` from the underlying level distribution.
 
 If any part of this code is used, the following paper must be cited: 
 
