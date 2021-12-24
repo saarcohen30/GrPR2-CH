@@ -1,4 +1,4 @@
-# Level-k Graph Probabilistic Recursive Reasoning (GrPR2-L) and Cognitive Hierarchy Graph Probabilistic Reasoning (GrPR2-CH)
+# Hierarchical Graph Probabilistic Recursive Reasoning
 Code for implementation of Cognitive Hierarchy Graph Probabilistic Recursive Reasoning (**<em>GrPR2-A</em>**), in the context of <em>The Cooperative Navigation Task</em> of the [Particle World environment](https://github.com/openai/multiagent-particle-envs). Specifically, GrPR2-A constitutes an extension of [FlowComm](https://www.ifaamas.org/Proceedings/aamas2021/pdfs/p456.pdf), supporting level-1 recursive reasoning <em>with communication</em>. 
 If any part of this code is used, the following paper must be cited: 
 
