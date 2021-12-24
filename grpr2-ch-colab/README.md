@@ -48,7 +48,7 @@ sudo pip3 install -e .
  ```
 
 ## Reference Projects
-The project implementation has referred much from the following projects:
+The implementation draws much inspiration from the following frameworks:
 
 * [Stein Variational Gradient Descent (SVGD)](https://github.com/DartML/Stein-Variational-Gradient-Descent)
   
