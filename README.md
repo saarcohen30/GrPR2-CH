@@ -5,7 +5,7 @@ Code for implementation of the following Hierarchical Graph Probabilistic Recurs
 
 If any part of this code is used, the following paper must be cited: 
 
-**Saar Cohen and Noa Agmon. Optimizing Multi-Agent Coordination via Hierarchical Graph Probabilistic Recursive Reasoning. <em>In AAMAS'22: Proceedings of the 21th International Conference on Autonomous Agents and Multiagent Systems, 2022</em> (to appear).**
+[**Saar Cohen and Noa Agmon. Optimizing Multi-Agent Coordination via Hierarchical Graph Probabilistic Recursive Reasoning. <em>In AAMAS'22: Proceedings of the 21th International Conference on Autonomous Agents and Multiagent Systems, 2022</em>.**](https://www.ifaamas.org/Proceedings/aamas2022/pdfs/p290.pdf)
 
 ## Dependencies
 Evaluations were conducted using a 12GB NVIDIA Tesla K80 GPU, and implemented in Python3 with:
